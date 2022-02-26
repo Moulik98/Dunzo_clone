@@ -5,9 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DUNZO</title>
-    <link rel="stylesheet" href="/landing.css">
+    <link rel="stylesheet" href="./styles/landing.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
 </head>
 <body>
+       <!-- navbar container -->
+       <div id="navbar-R">
+               
+            
+            
+    </div>
+
   <!--mumbai head-->
   <div id="mumbai">
     <div id="mumbai1">
@@ -19,10 +27,10 @@
 <!--mid-2 start here-->
 <div id="mid2">
   <div id="mid_2">
-      <div class="mid2_div"><a href=""><img class="mid2_img" src="https://ik.imagekit.io/dunzo/home/tr:w-488,h-360_home_icon/operator-FFWUCfzmUzhok89HMYt0ON2Gy5oZECO73gRenPw11HxAeCLBtTBOG8FMqMTe92UOnScOPMUnjYDcaPVxx7wSFJwXJ3kSR3YRsPby4EgC4zW2mVYLc99zuvVh7O2Ppmx2QMQd40UiwYLGhy0OjbMayr.png"></a></div>
+      <div class="mid2_div"><a href="./Groceries.html"><img class="mid2_img" src="https://ik.imagekit.io/dunzo/home/tr:w-488,h-360_home_icon/operator-FFWUCfzmUzhok89HMYt0ON2Gy5oZECO73gRenPw11HxAeCLBtTBOG8FMqMTe92UOnScOPMUnjYDcaPVxx7wSFJwXJ3kSR3YRsPby4EgC4zW2mVYLc99zuvVh7O2Ppmx2QMQd40UiwYLGhy0OjbMayr.png"></a></div>
       <div class="mid2_div"><a href=""><img class="mid2_img" src="https://ik.imagekit.io/dunzo/home/tr:w-488,h-360_home_icon/dunzo/icons/newHome/promoBanner/kitImageUrl/largeIcons/default_pnd_secondary2_1613527381240.png"></a></div>
       <div class="mid2_div"><a href=""><img class="mid2_img" src="https://ik.imagekit.io/dunzo/home/tr:w-488,h-360_home_icon/operator-ABHxCyRo8CLcEMC0YE43zsmH2XHFv3xr6B8Y3tIdBpKE1NBAjyHS4vgJY3T3z8AEascTap9OETFY0CdvpHj70KZSGFNrCxkFVtUugsMRkyV5jVk9XHl164PCPop56VNkdpLhfymH86JkFjMlYYgQHK.jpg"></a></div>
-      <div class="mid2_div"><a href=""><img class="mid2_img" src="https://ik.imagekit.io/dunzo/home/tr:w-488,h-360_home_icon/dunzo/icons/newHome/promoBanner/kitImageUrl/largeIcons/default_fnv_secondary2_1613527515094.png"></a></div>
+      <div class="mid2_div"><a href="./fruit-and-vegetable-stores.html"><img class="mid2_img" src="https://ik.imagekit.io/dunzo/home/tr:w-488,h-360_home_icon/dunzo/icons/newHome/promoBanner/kitImageUrl/largeIcons/default_fnv_secondary2_1613527515094.png"></a></div>
   </div>
 </div>
 
@@ -212,3 +220,15 @@
     </div>
 </body>
 </html>
+
+<!-- Navbar Import -->
+<script type="module" >
+
+    import navbar from "./components/navbar.js"
+console.log("navbar",navbar)
+let navbar_div=document.getElementById('navbar-R')
+navbar_div.innerHTML=navbar()
+
+
+
+</script>
