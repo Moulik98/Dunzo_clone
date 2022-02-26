@@ -9,6 +9,12 @@
 </head>
 <body>
     <div id="Cart_Main_Container_T">
+        
+         <!-- navbar container -->
+         <div id="navbar-R">
+
+            <div id="cart_items_container">
+
         <div id="cart_items"></div>
         <div id="Total_div">
 
@@ -28,8 +34,21 @@
             <input type="text" placeholder="Enter Expiry Date">
             
         </div>
+
+    </div>
     </div>
 </body>
 </html>
+
+
+<!-- Navbar Import -->
+<script type="module">
+    import navbar from "./components/navbar.js"
+ console.log("navbar",navbar)
+let navbar_div=document.getElementById('navbar-R')
+ navbar_div.innerHTML=navbar()
+
+
+</script>
 
 <script src ='./cart.js'></script>

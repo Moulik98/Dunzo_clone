@@ -11,6 +11,10 @@
 <body>
  
     <div id="Maincontainer_T">
+
+          <!-- navbar container -->
+          <div id="navbar-R">
+
         <!-- main product container -->
         <div id="Product_container"> </div>
 
@@ -32,5 +36,15 @@
 
 </body>
 </html>
+
+<!-- Navbar Import -->
+<script type="module">
+    import navbar from "./components/navbar.js"
+ console.log("navbar",navbar)
+let navbar_div=document.getElementById('navbar-R')
+ navbar_div.innerHTML=navbar()
+
+
+</script>
 
 <script src = './2ndFvPage.js'></script>

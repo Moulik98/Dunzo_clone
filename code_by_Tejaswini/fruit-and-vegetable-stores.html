@@ -10,6 +10,9 @@
  </head>
   <body>
     <div  id='main_container_T'>
+
+        <!-- navbar container -->
+        <div id="navbar-R">
    
     <!-- title and image -->
     <div id="TI_container_T">
@@ -34,5 +37,14 @@
 </body>
 </html>
 
+<!-- Navbar Import -->
+<script type="module">
+    import navbar from "./components/navbar.js"
+ console.log("navbar",navbar)
+let navbar_div=document.getElementById('navbar-R')
+ navbar_div.innerHTML=navbar()
+
+
+</script>
 
 <script src="./fruit-and-vegetable-stores.js"></script>
