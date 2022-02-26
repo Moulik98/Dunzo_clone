@@ -10,6 +10,7 @@
 /* container of title and image */
 #TI_container_T{
     /* border: 1px solid black; */
+    margin-top: 100px;
     height: 200px;
     background-color: rgb(247,253,250);
     padding-left: 200px;
@@ -46,6 +47,7 @@
  /* css for container_fv_T */
  #container_fv_T{
   /* border: 1px solid black; */
+ 
   width:150px;
   display: grid;
   grid-template-columns: repeat(2,1fr);

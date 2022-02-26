@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/styles/Groceries.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
 </head>
 <body>
     
-
+    <div id="navbar-R">
+        
+    </div>
 <div>
     </div>
     <div id="head">
@@ -32,3 +35,13 @@
 <script type="text/javascript" src="/scripts/Groceries.js"></script>
 </body>
 </html>
+
+<!-- Navbar Import -->
+<script type="module">
+    import navbar from "./components/navbar.js"
+ console.log("navbar",navbar)
+let navbar_div=document.getElementById('navbar-R')
+ navbar_div.innerHTML=navbar()
+
+
+</script>

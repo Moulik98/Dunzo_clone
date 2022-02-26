@@ -31,12 +31,13 @@
     cursor: pointer;
 }
 #head {
+  
     display: flex;
     width:100%;
     background-color: rgb(247, 253, 250);
     flex-direction: column;
     height:600px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 #name{
 margin-left: 14.5%;

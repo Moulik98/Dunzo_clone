@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/styles/Groceries_cart.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
 </head>
 <body>
         <div id="head">
+            <div id="navbar-R">
+        
+            </div>
             <p id="name"></p>
             <div id="p1">
                 <div id="p1a">
@@ -57,3 +61,13 @@
             <script type="text/javascript" src="/scripts/Groceries_cart.js"></script>
 </body>
 </html>
+
+<!-- Navbar Import -->
+<script type="module">
+    import navbar from "./components/navbar.js"
+ console.log("navbar",navbar)
+let navbar_div=document.getElementById('navbar-R')
+ navbar_div.innerHTML=navbar()
+
+
+</script>

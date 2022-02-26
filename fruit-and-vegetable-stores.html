@@ -7,12 +7,17 @@
     <title>Document</title>
     
   <link rel="stylesheet" href="./styles/fruit_and vegetable.css ">
+  <link rel="stylesheet" href="./styles/navbar.css">
  </head>
   <body>
     <div  id='main_container_T'>
 
         <!-- navbar container -->
         <div id="navbar-R">
+               
+            
+            
+          </div>
    
     <!-- title and image -->
     <div id="TI_container_T">
@@ -26,7 +31,8 @@
     <div>
         
         <h2>Order Fruits & Vegetables</h2>
-        <p class="min_t">14 Stores</p></div>
+        <p class="min_t">14 Stores</p>
+    </div>
         
     </div>
 </div>
@@ -34,17 +40,23 @@
     <div id="container_fv_T"></div>
 
 </div>
+
 </body>
 </html>
-
 <!-- Navbar Import -->
-<script type="module">
-    import navbar from "./components/navbar.js"
+<script type="module" >
+
+       import navbar from "./components/navbar.js"
  console.log("navbar",navbar)
 let navbar_div=document.getElementById('navbar-R')
  navbar_div.innerHTML=navbar()
 
+ 
 
 </script>
 
-<script src="./scripts/fruit-and-vegetable-stores.js"></script>
+<script src="./scripts/fruit-and-vegetable-stores.js">
+ 
+</script>
+
+

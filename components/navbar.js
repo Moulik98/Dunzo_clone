@@ -5,7 +5,7 @@ function navbar(){
             <img class="dunzo-img" onclick="window.location.href=''" src="https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-4d2d81aefcf296bc100d9edc114c2ea5.png" alt="">
         </div>
         <div class="location-div">
-            <img id="location-icon" src="https://cdn-icons.flaticon.com/png/128/4643/premium/4643473.png?token=exp=1645525965~hmac=fa4c77c03e2a632b4a87adadce613785" alt="">
+            <img id="location-icon" src="https://www.pinclipart.com/picdir/big/391-3913630_new-training-location-green-location-icon-png-clipart.png" alt="">
             <p class="location-tag" onclick="window.location.href=''">Set Location</p>
         </div>
     </div> 
@@ -17,7 +17,7 @@ function navbar(){
         <p class="Hover-class">Business with Dunzo</p>
     </div>
     <div class="search-div">
-        <img id="search-icon" src="https://cdn-icons.flaticon.com/png/128/2801/premium/2801881.png?token=exp=1645538287~hmac=5dddd90a879beb87dbd2f1e5dbf4906a" alt="">
+        <img id="search-icon" src="https://th.bing.com/th/id/OIP.UcEnmjkins9Evx4EGa6PIgHaHa?w=213&h=213&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="">
         <p class="Hover-class">Search</p>
     </div>
     <div class="cart-div">
