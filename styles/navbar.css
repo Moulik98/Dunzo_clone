@@ -4,11 +4,11 @@ body{
 #navbar-R{
      /* border: 1px solid black;  */
     height: 70px;
-    width: 100%;
+    width: 90%;
     display: flex;
     position: absolute;
     margin-top: -100px;
-    margin-left: -10px;
+    margin-left: 60px;
    
 }
 .first-div{
@@ -44,8 +44,8 @@ body{
 }
 #location-icon{
     height: 20%;
-    width: 14%;
-    margin-top: 25px;
+    width: 28%;
+    margin-top: 32px;
     margin-left: 30px;
 }
 .location-tag{
@@ -74,7 +74,12 @@ body{
     height: 100%;width: 18%;/*border: 1px solid rgb(29, 8, 85)*/;
 }
 #search-icon{
-    height: 15px;width: 40px;margin-top: 10px;
+   
+    height: 15px;width: 40px;margin-top: 19px;
+    margin-bottom: 1px;margin-left: 25px;
+    /* border: 1px solid rgb(29, 8, 85) */
+    
+    
 }
 .partners-div>p{
     margin-top: 26px;font-family: sans-serif;font-size: 17px;
@@ -83,17 +88,21 @@ body{
     margin-top: 26px;font-family: sans-serif;font-size: 17px;
 }
 .search-div>p{
-    font-size: 18px;margin-left: 10px;
+    font-size: 18px;margin-left: 30px;
+    margin-bottom: 90px;
 }
 .cart-div>p{
     font-size: 18px;margin-left: 10px;
 }
 #cart-icon{
-    height: 15px;width: 40px;margin-top: 10px;
+    height: 15px;width: 40px;margin-top: 19px;
+    margin-bottom: 1px;margin-left: 1px;
+    
 }
 #signIn-button{
-    color: rgb(244, 247, 247);background-color:rgb(0,210,144);height: 40px;width: 100px;
-    margin:13px 0px 0px 20px;border-radius: 15px;border: 1px solid white;
+    color: rgb(244, 247, 247);background-color:rgb(0,210,144);height: 35px;width: 70px;
+    margin:23px 0px 0px 50px;border-radius: 25px;border: 1px solid white;
+    font-weight: bolder;
 }
 .Hover-class:hover{
     color: aqua;cursor: pointer;

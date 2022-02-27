@@ -18,6 +18,7 @@
     height: 13%;width: 100%;
     /* border: 1px solid blue; */
     display: flex;
+    
 }
 #condition-div{
     height: 10%;width: 100%;
@@ -76,8 +77,10 @@ font-size: 20px;margin: 45px 0px 0px 10px;
     color: rgb(46, 45, 45);font-size: 23px;margin: 10px 0px 10px 0px;
 }
 #mobile_Num{
-    height: 85%;width: 350px;
+    height: 55%;width: 350px;
      border: 1px solid rgb(248, 248, 252); 
+     font-size: 20px;
+     margin-top: 5px;
 }
 #number-div:hover{
  border: 1px solid rgb(0,210,144); 
