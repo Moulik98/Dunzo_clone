@@ -1,83 +1,116 @@
+let before_element = document.getElementById('products1').querySelector('button');
+    let before_div = 0;
+
+    let Rice_Grains = [
+    {
+        name:'Rice & Grains'
+    },
+    {
+        name:'Daawat Biryani Basmati Rice',
+        img:'https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/cjdLRDdQemJGN2hEWkRjRnc5cStjQT09-product_image.jpg',
+        volume:'1kg',
+        price:220
+    },
+    {
+        name:'Fortune Biryani Special Basmati Rice',
+        img:'https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/aW9mM3dOYy94eFNjbndEanN1SWRSdz09-product_image.jpg',
+        volume:'1kg',
+        price:175
+    },
+    {
+        name:'Sabudana',
+        img:'https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1615706681361_product_5c282c2ff7e98871f4f8c193_1.jpg',
+        volume:'500gms',
+        price:59
+    }
+];
+
+let Pulses =[
+    {
+        name:'Pulses'
+    },
+    {
+        name:'Groundnuts',
+        img:'https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1615706651987_product_5c135ae66994164bc9f7fdc0_1.jpg',
+        volume:'500gms',
+        price:117,
+    },
+    {
+        name:'Kabuli Chana',
+        img:'https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1615706289164_product_5c135ae66994164bc9f7fdd1_1.jpg',
+        volume:'500gms',
+        price:123,
+    },
+    {
+        name:'Black Urad Dal',
+        img:'https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/cFVnVmxjcGJpUEJQMEVzaDNwaHRrdz09-product_image.jpg',
+        volume:'1kg',
+        price:140,
+    }
+];
 
 
+let Atta_Flour =[
+    {
+        name:'Atta & Flour'
+    },
+    {
+        name:'Aashirvaad Multigrain Atta',
+        img:'https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/aFlwL0h0d2RoT0poaG1WaU1zb3djUT09-product_image.jpg',
+        volume:'5kgs',
+        price:310,
+    },
+    {
+        name:'Besan Flour',
+        img:'https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/VVhnT3Y5YlZkbzVlL2RCVWVpamFsQT09-product_image.jpg',
+        volume:'500gms',
+        price:60,
+    },
+    {
+        name:'Aashirvaad Superior Mp Atta',
+        img:'https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1615700352436_product_5c2638fbbbc7ac725f291d26_1.jpg',
+        volume:'5kgs',
+        price:305,
+    }
+];
 
+let Provisions = [Rice_Grains,Pulses,Atta_Flour];
 
-let Fruits_Data=[
-   {
-      img:"https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/YVIzdnJwRm4rM2M2YVVmT1VjUDhxQT09-product_image.jpg",
-      name:'Fresh Fruits',
-      volume:'1 PC',
-      price:32,
-      Dprice:42
-   },
-    {
-       img:"https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/YVIzdnJwRm4rM2M2YVVmT1VjUDhxQT09-product_image.jpg",
-       name:'Fresh Coconut',
-       volume:'1 PC',
-       price:32,
-       Dprice:42
-    },
-    {
-       img:"https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1644844132032_product_5bd323493cd51519e935400c_1.jpg",
-       name:'Orange',
-       volume:'6 PC',
-       price:59,
-       Dprice:87
-    },
-    {
-       img:"https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1644844008116_product_5c0916970ac44c06a6f15e0d_1.jpg",
-       name:'Washington Apple',
-       volume:'4 PC',
-       price:181,
-       Dprice:87
-    },
-    {
-       img:"https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1644844135183_product_5c35dbf1b1e6c12dfdc86725_1.jpg",
-       name:'Apple Royal Gala',
-       volume:'6 PC',
-       price:239,
-       Dprice:298
-    },
-    {
-       img:"https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1644844135293_product_5c35dbf1b1e6c12dfdc86747_1.jpg",
-       name:'Sweet Lime - Mosambi',
-       volume:'4 PC',
-       price:68,
-       Dprice:76
-    },
-    {
-       img:"https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1644844010337_product_5c790174d661476ccea6355f_1.jpg",
-       name:'Muskmelon',
-       volume:'1 PC',
-       price:50,
-       Dprice:62
-    },
-    {
-       img:"https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1644844136632_product_5c80d9cbd8b2f755a2d44052_1.jpg",
-       name:'Pineapple',
-       volume:'1 PC',
-       price:51,
-       Dprice:63
-    },
-    {
-       img:"https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1644844133820_product_5c0e70078d92d07fdfc24835_1.jpg",
-       name:'Pomegranate',
-       volume:'2 PC',
-       price:81,
-       Dprice:120
-    },
-    {
-       img:"https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1644844010855_product_5caef825de0f3b0443a7d9d7_1.jpg",
-       name:'Papaya',
-       volume:'1 PC',
-       price:56,
-       Dprice:62
-    },
-]
+localStorage.setItem('provisions',JSON.stringify(Provisions));
 
+    let CovidEssentials = [
+    {
+        name:'Covid Essentials'
+    },  
+    {
+        name: "Dettol Original Instant Hand Sanitizer",
+        volume: "200 Ml",
+        price: "190",
+        img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/VnZSM1BxMEVTaUJNbHBJUkRJaSt5UT09-product_image.jpg",
+    }, {
+        name: "N95 Reusable Outdoor Mask",
+        volume: "1 Pc",
+        price: "100",
+        img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/Mkw5K0FxSnpnWGh6SXBzWTRQMkhaUT09-product_image.jpg",
+    }, {
+        name: "Comfort After Wash Anti Bacterial Fabric Conditioner",
+        volume: "200 Ml",
+        price: "56",
+        img: "https://ik.imagekit.io/dunzo/1614969862598_variant_5c021de829a128442cdc375f_1.jpg?tr=w-488,h-488,cm-pad_resize",
+    }, {
+        name: "Surf Excel Easywash Detergent Powder",
+        volume: "500 Gms",
+        price: "155",
+        img: "https://ik.imagekit.io/dunzo/1614969860568_variant_5bffffb0f07b8356278c14a6_1.jpg?tr=w-488,h-488,cm-pad_resize",
+    }, {
+        name: "Vanish Oxi Action Liquid",
+        volume: "180 Ml",
+        price: "199",
+        img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1615700527346_product_5bf85b70269a0f1dd3c38995_1.jpg",
+    }, ];
 
-    let fruits_Data= [Fruits_Data];
-    localStorage.setItem('fruits_Data',JSON.stringify(fruits_Data));
+    let covidEssentials = [CovidEssentials];
+    localStorage.setItem('covidEssentials',JSON.stringify(covidEssentials));
 
 
 
@@ -166,7 +199,7 @@ let Fruits_Data=[
     
 
 
-    display(JSON.parse(localStorage.getItem('fruits_Data')));
+    display(JSON.parse(localStorage.getItem('covidEssentials')));
     
 
     function moveToCart() {
@@ -381,8 +414,7 @@ let Fruits_Data=[
             document.getElementById('circle').style.display = "none";
         }
 
-          // navbar logo functionality
-    document.getElementById("logo").addEventListener("click", hello);
-    function hello() {
-        window.location.href = "./index.html"
-    }
+        document.getElementById("logo").addEventListener("click", hello);
+        function hello() {
+            window.location.href = "./index.html"
+        }

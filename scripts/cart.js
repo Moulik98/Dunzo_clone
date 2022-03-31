@@ -1,133 +1,203 @@
-let second_cartArray = JSON.parse(localStorage.getItem("second_cartArray"));
-console.log('data',second_cartArray);
+
+let cart = JSON.parse(localStorage.getItem('dunzoCart'));
+console.log(cart);
+
+var btn = document.getElementById("add");
+    btn.addEventListener("click", function() {
+        document.getElementById("add1").style.display = "flex";
+    });
+    var close = document.getElementById("close");
+    close.addEventListener("click", function() {
+        document.getElementById("add1").style.display = "none";
+    });
+    var btn2 = document.getElementById("cards");
+    btn2.addEventListener("click", function() {
+        document.getElementById("add_card").style.display = "flex";
+    });
+    var close2 = document.getElementById("close2");
+    close2.addEventListener("click", function() {
+        document.getElementById("add_card").style.display = "none";
+    });
+
+    var continue_btn = document.getElementById("continue_btn");
+    var add_address = document.getElementById("add");
+
+    continue_btn.addEventListener("click", cont)
+
+    function cont() {
+        var parent = document.getElementById("pay1");
+        parent.removeChild(add_address);
+        document.getElementById("add1").style.display = "none";
+
+        var new_add = document.createElement("div");
+        new_add.setAttribute("id", "div1");
+
+        var address1 = document.getElementById("aline1").value;
+        address1.textContent = address1;
+
+        var address2 = document.getElementById("aline2").value;
+
+        address2.textContent = address2;
+
+        var address3 = document.getElementById("aline3").value;
+
+        address3.textContent = address3;
+
+        var address4 = document.getElementById("aline4").value;
+
+        address4.textContent = address4;
+
+        var page1 = document.getElementById("page");
+        parent.removeChild(page1);
+
+
+        new_add.append(address1+", " +address2 + ", " + address3 + ", " + address4);
+        parent.append(new_add);
+
+        var change_add = document.createElement("div");
+
+        var change_add_btn = document.createElement("button");
+        change_add_btn.innerText = "Change Address";
+        change_add_btn.setAttribute("id", "change_add_btn");
+
+        change_add.append(change_add_btn);
+        parent.append(change_add);
+
+    };
 
 
 
-second_cartArray.map(function (data){
-    let div = document.createElement('div')
 
-let img = document.createElement('img');
-img.src = data.img_url
+    function displayCartItems() {
+        let total_price = 0;
+        let main_div = document.getElementById('cart')
+        main_div.style.overflow = 'scroll';
+        let cart = JSON.parse(localStorage.getItem('dunzoCart'));
+        console.log("cart",cart);
 
-let name = document.createElement('h2');
-name.innerText = data.name;
+        while (main_div.firstChild) {
+            main_div.removeChild(main_div.lastChild);
+        }
 
-let pc  = document.createElement('p');
-pc.innerText = data.pc;
+        let p = document.createElement('p');
+        p.innerText = 'Your Cart';
+    
+        let ul = document.createElement('ul');
+        main_div.append(p);
 
-let price = document.createElement('p')
-price.innerText = `₹${data.price}`
+        cart.forEach(function (prd) {
+            let li = document.createElement('li');
+            li.style.display = 'flex';
+            li.style.marginBottom = '15px'
 
-button = document.createElement("button")
-button.setAttribute('id','btn_fruit');
-button.innerText='- 1 +'
+            let div1 = document.createElement('div');
+            div1.style.width = '40%'
+            let h3 = document.createElement('h3');
+            h3.innerText = prd.name;
+            h3.style.fontWeight = 'lighter';
+            let h5 = document.createElement('h5');
+            h5.style.fontWeight = 'lighter';
+            h5.innerText = prd.volume;
 
-div.append(img,name,pc,price,button)
-document.getElementById('cart_items').append(div)
+            let div2 = document.createElement('div');
+            div2.id = "box";
+            div2.style.width = '20%'
+            div2.style.height="30px"
+            let btn1 = document.createElement('button');
+            btn1.id = 'minus';
+            
+            btn1.addEventListener('click', function () {
+                //when quantity of an item is decreased price decreased
+                let name = event.target.parentNode.parentNode.firstChild.querySelector('h3').innerText;
 
-})
+                let cart = JSON.parse(localStorage.getItem('dunzoCart'));
 
-let s_c = JSON.parse(localStorage.getItem("second_cartArray"));
+                cart.forEach(function (prd, index) {
+                    if (prd.name == name) {
+                        prd.qty = prd.qty - 1;
+                        if (prd.qty == 0) {
+                            cart.splice(index, 1)
+                        }
+                        total_price -= prd.price;
+                    }
+                });
+                localStorage.removeItem('dunzoCart')
+                localStorage.setItem('dunzoCart', JSON.stringify(cart));
+                location.reload();
+                if (JSON.parse(localStorage.getItem('dunzoCart')).length === 0) {
+                    localStorage.removeItem('dunzoCart')
+                }
 
-s_c.map(function (data){
-let total_div1 = document.createElement('div');
+            })
 
-let p1 = document.createElement('p');
-p1.textContent= 'Item total'
-
-let p2 = document.createElement('p');
-p2.textContent= `₹${data.price}`;
-
-total_div1.append(p1,p2)
-
-let total_div2 = document.createElement('div');
-
-let p3 = document.createElement('p');
-p3.textContent= 'Tax'
-
-let p4 = document.createElement('p');
-p4.textContent= `₹0`;
-
-total_div2.append(p3,p4);
-
-
-let total_div3 = document.createElement('div');
-
-let p5 = document.createElement('p');
-p5.textContent= 'Packing'
-
-let p6 = document.createElement('p');
-p6.textContent= `₹0`;
-
-total_div3.append(p5,p6)
-
-let total_div4 = document.createElement('div');
-
-let p7 = document.createElement('p');
-p7.textContent= 'Partent delivery fee'
-
-let p8 = document.createElement('p');
-p8.textContent= `₹0`;
-
-total_div4.append(p7,p8);
-
-
-let total_div5 = document.createElement('div');
-
-let h1 = document.createElement('h2');
-h1.textContent= 'To Pay'
-
-let h2 = document.createElement('h2');
-h2.textContent= `₹${data.price}`;
-
-total_div5.append(h1,h2);
-
-let main_total = document.createElement("div");
-main_total.setAttribute('id','main_total_t');
-main_total.append(total_div1,total_div2,total_div3,total_div4,total_div5);
-
-document.getElementById("Total_div").append(main_total);
+         
+            let span = document.createElement('span');
+            span.id = 'val';
 
 
-})
+            let btn2 = document.createElement('button');
+            btn2.id = 'plus';
 
 
+            btn2.addEventListener('click', function () {
+                //when quantity of an item is increased
+                let name = event.target.parentNode.parentNode.firstChild.querySelector('h3').innerText;
 
-let add_div = document.getElementById('add_btn');
-add_div.addEventListener("click",function(){
-    AddAddress()
- })
+                let cart = JSON.parse(localStorage.getItem('dunzoCart'));
 
+                cart.forEach(function (prd) {
+                    if (prd.name == name) {
+                        prd.qty = prd.qty + 1;
+                        total_price += prd.price;
+                    }
+                });
+                localStorage.removeItem('dunzoCart')
+                localStorage.setItem('dunzoCart', JSON.stringify(cart));
+                location.reload();
+            })
 
- AddAddress = () => {
-     let add = document.getElementById('textArea').value;
+            span.innerText = prd.qty;
+            btn1.innerText = '-';
+            btn2.innerText = '+';
 
-     let display_add = document.getElementById("display_add")
-     display_add .append(add);
-     add=''
+            let div3 = document.createElement('div');
+            div3.style.width = '20%'
+            let h4 = document.createElement('h4');
+            h4.innerText = '₹' + prd.price * prd.qty;
+            
+           
+            total_price += prd.price*prd.qty;
+            document.getElementById('itemtotal').innerText = `₹ ${total_price}`;
+            document.getElementById('topay').innerText = `₹ ${total_price}`;
 
-    //  let card_num = document.createElement("input")
-
-     let cheackout = document.createElement('button');
-     cheackout.setAttribute("id",'pay_button_t')
-     cheackout.innerHTML='Make Payment'
-     cheackout.addEventListener("click",function(){
-        Thanks()
-     })
-
-      
-
-     display_add .append(add,cheackout);
-
-   
- }
-
- Thanks = () =>{
-     window.location.href='./ThankYou.html'
- }
-
+            //console.log(total_price);
 
 
-     
+            div1.append(h3, h5);
+            div2.append(btn1, span, btn2);
+            div3.append(h4)
+            
+            li.append(div1, div2, div3);
+            ul.append(li)
+        })
 
+        
 
+        main_div.append(ul);
+    }
+
+      displayCartItems();
+    
+    function redirect(){
+        window.location.href="/index.html"
+    }
+    //redirect to home
+    function home(){
+        window.location.href="./index.html"
+    }
+
+    var confirm_pay = document.getElementById("confirm_pay");
+    confirm_pay.addEventListener("click",function(){
+        console.log("ckgsdyuvdsvh")
+        window.location.href = "./ThankYou.html"
+    })
