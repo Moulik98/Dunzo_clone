@@ -244,7 +244,7 @@ localStorage.setItem('provisions',JSON.stringify(Provisions));
             
         }
         if(JSON.parse(localStorage.getItem('dunzoCart')) != null){
-            //console.log("madhu")
+           
             displayCartItems();
         }
        
